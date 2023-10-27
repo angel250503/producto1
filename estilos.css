@@ -1,0 +1,69 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cuadros superiores (color: #D0AAD1) */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+        background-color: #D0AAD1;
+    }
+}
+
+/* Cuadros laterales (color: #FFE7C1) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        padding: 15px;
+        background-color: #FFE7C1;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 992px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white; /* Cambiar el color de fondo de la tabla */
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    background-color: #D0AAD1; /* Cambiar el color de fondo de las celdas de encabezado */
+    text-align: center;
+}
+
+/* Estilos para las celdas de datos */
+td {
+    background-color: #FFE7C1; /* Cambiar el color de fondo de las celdas de datos */
+    text-align: left;
+    padding: 8px;
+}
+.seccion {
+    margin-bottom: 20px; /* Margen inferior entre secciones */
+    padding: 20px; /* Espacio interno dentro de cada sección */
+    background-color: #d0e9e9; /* Color de fondo de las secciones */
+    border: 1px solid #e8aeae; /* Borde alrededor de las secciones */
+  }
+  
+  h1, h2, h3 {
+    color: #333; /* Color del texto de los encabezados */
+  }

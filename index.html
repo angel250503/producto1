@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página</title>
+</head>
+<link rel="stylesheet" href="estilos.css">
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.php">Inicio <span class="sr-only">(actual)</span></a>
+            </li>
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link" href="portada.php">Portada </a>
+            </li>
+              <a class="nav-link" href="tabla.php">Tabla Comparativa </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reporte.php">Lista de herramientas utilizadas </a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav> 
+    <div id="portada"></div>
+    <div id="tabla"></div>
+    <div id="reporte"></div>
+    
+    <script>
+        // Variable para controlar si el footer se ha cargado o no
+        var footerCargado = false;
+
+        function LoadContent(file, targetElementId) {
+            var xhttp = new XMLHttpRequest();
+            
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById(targetElementId).innerHTML = this.responseText;
+
+                    
+                }
+            };
+            
+            xhttp.open("GET", file, true);
+            xhttp.send();
+        }
+
+        // Cargar el contenido principal
+
+        LoadContent('portada2.php', 'portada');
+        LoadContent('tabla2.php', 'tabla');
+        LoadContent('reporte2.php', 'reporte');
+
+    </script>
+<footer class="bg-dark text-white text-center py-3">
+    &copy; 2023 Janet Perez Rosas, Angel Antonio Hernandez Torres | Todos los derechos reservados
+</footer>
+</body>
+</html>
